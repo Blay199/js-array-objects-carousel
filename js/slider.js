@@ -1,4 +1,3 @@
-// recupero elemento slides wrapper
 // cicliamo foreach 
 	// creo variabile template literal con un li ${}
 	// sostituisco gli elementi statici html con elementi array in dot.notation
@@ -19,11 +18,26 @@
 
 
 
+// recupero elemento slides wrapper
+const slideWrapperEl = document.querySelector('.slides-wrapper')
 
+slides.forEach(element => {
+	let slideEl = `
+	<li class="slide active">
+            <img src="${url}" alt="">
+            <div class="slide__content">
+              <h3 class="slide__title">${title}</h3>
+              <p class="slide__description">${description}</p>
+            </div>
+          </li>
+	`
+	slideWrapperEl.push(slideEl)
+});
 
+let indexActive = 0;
 
-
-
+let slidesArray = [document.querySelectorAll('.slide')]
+slidesEl[indexActive].classList.add('active')
 
 // console.log('slider')
 const slides = [

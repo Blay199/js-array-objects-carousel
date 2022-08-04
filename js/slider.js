@@ -56,21 +56,28 @@
 const slideWrapperEl = document.querySelector('.slides-wrapper')
 
 slides.forEach((element, indice) => {
-	let slideEl = `
-	<li class="slide`
+	let activeClass = "";
 	if (indice === 0) {
-		slideEl += ` active`
+		activeClass = "active"
 	}
-	slideEl +=`">
-            <img src="${element.url}" alt="">
-            <div class="slide__content">
-              <h3 class="slide__title">${element.title}</h3>
-              <p class="slide__description">${element.description}</p>
-            </div>
-          </li>
+  
+	let slideEl = `
+	<li class="slide ${activeClass}">
+      <img src="${element.url}" alt="">
+      <div class="slide__content">
+        <h3 class="slide__title">${element.title}</h3>
+        <p class="slide__description">${element.description}</p>
+      </div>
+    </li>
 	`
 	slideWrapperEl.innerHTML += slideEl
 });
+
+const prevArrow = document.querySelector('.arrow-prev')
+prevArrow.addEventListener(click) {
+	
+}
+
 
 
 // console.log('slider')

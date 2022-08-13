@@ -54,9 +54,10 @@
 
 // recupero elemento slides wrapper
 const slideWrapperEl = document.querySelector('.slides-wrapper')
-
+let indice = 2 
 slides.forEach((element, indice) => {
 	let activeClass = "";
+	console.log(this.indice)
 	if (indice === 0) {
 		activeClass = "active"
 	}
@@ -73,11 +74,10 @@ slides.forEach((element, indice) => {
 	slideWrapperEl.innerHTML += slideEl
 });
 
-const prevArrow = document.querySelector('.arrow-prev')
-prevArrow.addEventListener(click) {
-	
-}
-
-
+const nextArrow = document.querySelector('.arrow-next')
+nextArrow.addEventListener('click', function() {
+	indice 
+	console.log('ciao' + nextArrow)
+})
 
 // console.log('slider')
